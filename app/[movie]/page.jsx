@@ -31,39 +31,55 @@ async function MovieDetails({ params }) {
           </a>
           <div className='mt-2 text-gray-500'>{movie.overview}</div>
           <div className='mt-4'>
-            <span className='text-gray-500'>Release Date:</span>{" "}
-            {new Date(movie.release_date)}
+            <span className='text-gray-500'>
+              Release Date:
+              {new Date(movie.release_date)}
+            </span>{" "}
           </div>
           <div className='mt-4'>
-            <span className='text-gray-500'>Runtime:</span> {movie.runtime} min
+            <span className='text-gray-500'>
+              Runtime:
+              {movie.runtime} min
+            </span>
           </div>
           <div className='mt-4'>
-            <span className='text-gray-500'>Genres:</span>{" "}
-            {movie.genres.map((genre) => genre.name).join(", ")}
+            <span className='text-gray-500'>
+              Genres:
+              {movie.genres.map((genre) => genre.name).join(", ")}
+            </span>{" "}
           </div>
           <div className='mt-4'>
-            <span className='text-gray-500'>Production Companies:</span>{" "}
-            {movie.production_companies
-              .map((company) => company.name)
-              .join(", ")}
+            <span className='text-gray-500'>
+              Production Companies:
+              {movie.production_companies
+                .map((company) => company.name)
+                .join(", ")}
+            </span>{" "}
           </div>
           <div className='mt-4'>
-            <span className='text-gray-500'>Budget:</span>{" "}
-            {new Intl.NumberFormat("en-US", {
-              style: "currency",
-              currency: "USD",
-            }).format(movie.budget)}
+            <span className='text-gray-500'>
+              Budget:
+              {new Intl.NumberFormat("en-US", {
+                style: "currency",
+                currency: "USD",
+              }).format(movie.budget)}
+            </span>{" "}
           </div>
           <div className='mt-4'>
-            <span className='text-gray-500'>Revenue:</span>{" "}
-            {new Intl.NumberFormat("en-US", {
-              style: "currency",
-              currency: "USD",
-            }).format(movie.revenue)}
+            <span className='text-gray-500'>
+              Revenue:
+              {new Intl.NumberFormat("en-US", {
+                style: "currency",
+                currency: "USD",
+              }).format(movie.revenue)}
+            </span>{" "}
           </div>
           <div className='mt-4'>
-            <span className='text-gray-500'>Rating:</span> {movie.vote_average}
-            /10 ({movie.vote_count} votes)
+            <span className='text-gray-500'>
+              Rating:
+              {movie.vote_average}
+              /10 ({movie.vote_count} votes)
+            </span>
           </div>
         </div>
       </div>
