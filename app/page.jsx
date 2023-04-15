@@ -12,7 +12,6 @@ export default async function Home() {
 
   return (
     <div>
-      <h1 className={`${montserrat.className}`}>hello from next 13</h1>;
       <div className='container m-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-10'>
         {data.results.map((movie) => (
           <Movie {...movie} />
